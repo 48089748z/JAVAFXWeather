@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.Text?>
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="250.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+   <children>
+      <MenuBar layoutY="2.0" prefHeight="26.0" prefWidth="191.0" AnchorPane.bottomAnchor="375.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="30.0" AnchorPane.topAnchor="0.0">
+        <menus>
+          <Menu mnemonicParsing="false" text="File">
+            <items>
+                  <Menu mnemonicParsing="false" text="City">
+                    <items>
+                      <MenuItem mnemonicParsing="false" onAction="#changeCity" text="Barcelona" />
+                        <MenuItem mnemonicParsing="false" onAction="#changeCity" text="Tokyo" />
+                        <MenuItem mnemonicParsing="false" onAction="#changeCity" text="Paris" />
+                        <MenuItem mnemonicParsing="false" onAction="#changeCity" text="Berlin" />
+                        <MenuItem mnemonicParsing="false" onAction="#changeCity" text="London" />
+                        <MenuItem mnemonicParsing="false" onAction="#changeCity" text="Brussels" />
+                        <MenuItem mnemonicParsing="false" onAction="#changeCity" text="Rome" />
+                        <MenuItem mnemonicParsing="false" onAction="#changeCity" text="Oslo" />
+                        <MenuItem mnemonicParsing="false" onAction="#changeCity" text="Amsterdam" />
+                        <MenuItem mnemonicParsing="false" onAction="#changeCity" text="Moscow" />
+                        <MenuItem mnemonicParsing="false" onAction="#changeCity" text="Miami" />
+                        <MenuItem mnemonicParsing="false" onAction="#changeCity" text="Bangkok" />
+                        <MenuItem mnemonicParsing="false" onAction="#changeCity" text="Sidney" />
+                        <MenuItem mnemonicParsing="false" onAction="#changeCity" text="Dubai" />
+                    </items>
+                  </Menu>
+                  <Menu mnemonicParsing="false" text="Forecast">
+                    <items>
+                      <MenuItem mnemonicParsing="false" onAction="#changeDays" text="1 day" />
+                        <MenuItem mnemonicParsing="false" onAction="#changeDays" text="2 days" />
+                        <MenuItem mnemonicParsing="false" onAction="#changeDays" text="3 days" />
+                        <MenuItem mnemonicParsing="false" onAction="#changeDays" text="4 days" />
+                        <MenuItem mnemonicParsing="false" onAction="#changeDays" text="5 days" />
+                        <MenuItem mnemonicParsing="false" onAction="#changeDays" text="6 days" />
+                        <MenuItem mnemonicParsing="false" onAction="#changeDays" text="7 days" />
+                        <MenuItem mnemonicParsing="false" onAction="#changeDays" text="8 days" />
+                        <MenuItem mnemonicParsing="false" onAction="#changeDays" text="9 days" />
+                        <MenuItem mnemonicParsing="false" onAction="#changeDays" text="10 days" />
+                        <MenuItem mnemonicParsing="false" onAction="#changeDays" text="11 days" />
+                        <MenuItem mnemonicParsing="false" onAction="#changeDays" text="12 days" />
+                        <MenuItem mnemonicParsing="false" onAction="#changeDays" text="13 days" />
+                        <MenuItem mnemonicParsing="false" onAction="#changeDays" text="14 days" />
+                    </items>
+                  </Menu>
+                  <Menu mnemonicParsing="false" text="Degree Units">
+                    <items>
+                      <MenuItem mnemonicParsing="false" onAction="#changeUnits" text="Celsius" />
+                        <MenuItem mnemonicParsing="false" onAction="#changeUnits" text="Fahrenheit" />
+                    </items>
+                  </Menu>
+                  <MenuItem mnemonicParsing="false" onAction="#refresh" text="Refresh" />
+              <MenuItem mnemonicParsing="false" onAction="#close" text="Close" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Edit">
+            <items>
+                  <MenuItem mnemonicParsing="false" onAction="#cityDetails" text="Selected City Details" />
+                  <MenuItem mnemonicParsing="false" onAction="#averageTemp" text="Average Temp" />
+              <MenuItem mnemonicParsing="false" onAction="#back" text="Back" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Help">
+            <items>
+              <MenuItem mnemonicParsing="false" onAction="#about" text="About" />
+            </items>
+          </Menu>
+        </menus>
+      </MenuBar>
+      <ListView fx:id="mainList" layoutY="43.0" prefHeight="357.0" prefWidth="220.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="43.0" />
+      <ImageView fx:id="image" fitHeight="100.0" fitWidth="100.0" layoutX="75.0" layoutY="82.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="218.0" AnchorPane.leftAnchor="75.0" AnchorPane.rightAnchor="75.0" AnchorPane.topAnchor="82.0" />
+      <Text fx:id="headerText" layoutX="7.0" layoutY="39.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Barcelona Spain" wrappingWidth="250.0" AnchorPane.bottomAnchor="358.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="25.0" />
+      <ListView fx:id="detailsList" layoutY="234.0" prefHeight="166.0" prefWidth="250.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="234.0" />
+      <Button layoutX="218.0" layoutY="1.0" mnemonicParsing="false" onAction="#back" prefHeight="25.0" prefWidth="32.0" text="&lt;-" AnchorPane.bottomAnchor="375.0" AnchorPane.leftAnchor="218.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+      <ImageView fx:id="cityImage" fitHeight="193.0" fitWidth="250.0" layoutY="43.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="164.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="43.0" />
+   </children>
+</AnchorPane>
